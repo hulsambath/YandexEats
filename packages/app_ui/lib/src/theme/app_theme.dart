@@ -1,7 +1,6 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shadcn_ui/shadcn_ui.dart';
 
 /// {@template app_theme}
 /// The Default App [ThemeData].
@@ -29,7 +28,7 @@ class AppTheme {
 
   /// Defines shadcn_ui [ThemeData].
   ShadTextTheme get shadTextTheme => ShadTextTheme(
-        family: 'Inter',
+        family: 'khmer',
         package: 'app_ui',
         h1Large: textTheme.displayMedium,
         h1: textTheme.displaySmall,
@@ -113,7 +112,7 @@ class SystemUiOverlayTheme {
     systemNavigationBarIconBrightness: Brightness.dark,
   );
 
-  /// Defines iOS dark SystemUiOverlayStyle.
+  /// Defines iOS dark SystemUiOverlayStyle.`
   static const SystemUiOverlayStyle iOSDarkSystemBarTheme =
       SystemUiOverlayStyle(
     statusBarBrightness: Brightness.light,
