@@ -6,7 +6,7 @@ abstract class UITextStyle {
   static const _baseTextStyle = TextStyle(
     package: 'app_ui',
     fontWeight: AppFontWeight.medium,
-    fontFamily: 'Inter',
+    fontFamily: 'khmer',
     decoration: TextDecoration.none,
     textBaseline: TextBaseline.alphabetic,
   );
@@ -71,7 +71,7 @@ abstract class UITextStyle {
 
   /// Headline 6 Text Style
   static final TextStyle headline6 = _baseTextStyle.copyWith(
-    fontFamily: 'Inter',
+    fontFamily: 'khmer',
     fontSize: 24,
     height: 1.27,
     fontWeight: AppFontWeight.bold,
