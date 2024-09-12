@@ -28,7 +28,7 @@ class AppTheme {
 
   /// Defines shadcn_ui [ThemeData].
   ShadTextTheme get shadTextTheme => ShadTextTheme(
-        family: 'khmer',
+        family: 'noto-serif-khmer',
         package: 'app_ui',
         h1Large: textTheme.displayMedium,
         h1: textTheme.displaySmall,

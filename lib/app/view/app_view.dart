@@ -1,11 +1,13 @@
-import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:yandex_eats_clone/home/view/home_screen.dart';
+// import 'package:yandex_eats_clone/app/route/app_router.dart';
+import 'package:yandex_eats_clone/auth/auth.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppView extends StatelessWidget {
+  const AppView({super.key});
   @override
   Widget build(BuildContext context) {
+    // final route = AppRouter().router;
+
     return ShadApp.material(
       debugShowCheckedModeBanner: false,
       title: 'Yandex Eats Clone',
@@ -28,9 +30,7 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      home: const MyHomePage(
-        title: 'Flutter Demo Home Page',
-      ),
+      home: const AuthScreen(),
     );
   }
 }

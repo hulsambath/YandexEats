@@ -28,24 +28,35 @@ flutter:
     - assets/icons/
     - assets/fonts/
   fonts:
-    - family: khmer
+    - family: noto-serif-khmer
       fonts:
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 800
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 700
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 600
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 500
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 400
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 300
-        - asset: assets/fonts/Khmer-Regular.ttf
+        - asset: assets/fonts/noto_serif_khmer.ttf
           weight: 200
   uses-material-design: true
   generate: true
   module:
     androidPackage: com.example.app_ui
     iosBundleIdentifier: com.example.appUi
+
+flutter_gen:
+  assets:
+    enabled: true
+    outputs:
+      package_parameter_enabled: true
+  output: lib/generated/gen/
+  line_length: 80
+
+  integrations:
+    flutter_svg: true
