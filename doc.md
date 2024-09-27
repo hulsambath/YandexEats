@@ -1,4 +1,4 @@
-### Add new flavor App
+## 1. Add new flavor App
 * In `android/app/build.gradle`
 ```gradle
 android {
@@ -22,12 +22,12 @@ android {
   }
 ```
 
-### Add new configs file
+## 2. Add new configs file
 * In `configs/flavor.json`
 ```json
 {
-  "APP_NAME": "BookMe+",
-  "APP_SCHEME": "bookmeplus",
+  "APP_NAME": "App Name",
+  "APP_SCHEME": "appscheme",
   "WEB_HOST": "example.com",
   "WWW_WEB_HOST": "www.example.com",
   "API_URL": "http://api.example.com",
@@ -53,7 +53,7 @@ android {
 configs/$flavor.json
 ```
 
-### Add script for generating `flavor.dart` in `firebase_options/`:
+## 3. Add script for generating `flavor.dart` in `firebase_options/`:
 **This script will generates `flavor.dart` file in `lib/firebase_options/` and `main_flavor.dart` file**
 * In `script/firebase_configure/exec.sh`
 ```exec.sh
@@ -79,11 +79,11 @@ function main(){
 ./scripts/firebase_configure/exec.sh --flavor
 ```
 
-### Create new flavor icon:
+## 4. Create new flavor icon:
 * Create folder `flavor_icons/` in `app/external_assets/` and store the icons in this folder
 * Create folder `flavor_logo/` in `app/external_assets/`  and store the logo in this folder
 
-### Add generate launched icons for new flavor [![flutter_launcher_icons](https://img.shields.io/badge/Flutter%20Community-flutter__launcher__icons-blue)](https://pub.dev/packages/flutter_launcher_icons)
+## 5. Add generate launched icons for new flavor [![flutter_launcher_icons](https://img.shields.io/badge/Flutter%20Community-flutter__launcher__icons-blue)](https://pub.dev/packages/flutter_launcher_icons)
 * Create a new `flutter_launcher_icons-flavor.yaml` file in `app/`
 * In `flutter_launcher_icons-flavor.yaml`:
 ```yaml  
@@ -118,10 +118,10 @@ flutter pub get
 dart run flutter_launcher_icons -f flavor
 ```
 
-### Create new flavor splash image:
+## 6. Create new flavor splash image:
 * Create folder `flavor_splash/` in `app/assets/` and store the image in this folder
 
-### Create Splash screen for new flavor app ![flutter_native_splash](https://img.shields.io/badge/flutter_native_splash-v2.4.0-blue)
+## 7. Create Splash screen for new flavor app ![flutter_native_splash](https://img.shields.io/badge/flutter_native_splash-v2.4.0-blue)
 * Create a new `flutter_native_splash-flavor.yaml` file in `app/` folder
 * In `flutter_native_splash-flavor.yaml`:
 ```yaml
@@ -155,16 +155,16 @@ dart run flutter_native_splash:create --path:flutter_native_splash-flavor.yaml
 dart run flutter_native_splash:create --flavor flavor # example: prod, staging, dev, ...
 ```
 
-### Create new ThemeConfig and ThemeConstant for new flavor:
+## 8. Create new ThemeConfig and ThemeConstant for new flavor:
 * Create `theme_config_flavor.dart` in `lib/core/theme/` folder
 * Create `theme_constamt_flavor.dart` in `lib/core/theme/` folder
 
-### Update ThemeProvider:
+## 9. Update ThemeProvider:
 * Update ThemeProvider() in `lib/provider/theme_provider.dart`
 ```dart
   ThemeData light() {
-    switch (ApiConstant.appName) {
-      case 'Flavor App Name':
+    switch (ApiConstant.appscheme) {
+      case 'Flavor App Name': // example: bookmeplus
         return ThemeConfigFlavor.light().themeData;
       // ...
       // ...
@@ -175,7 +175,7 @@ dart run flutter_native_splash:create --flavor flavor # example: prod, staging, 
 
   ThemeData dark() {
     switch (ApiConstant.appName) {
-      case 'Flavor App Name':
+      case 'Flavor App Scheme':
         return ThemeConfigFlavor.dark().themeData;
       // ...
       // ...
@@ -184,3 +184,19 @@ dart run flutter_native_splash:create --flavor flavor # example: prod, staging, 
     }
   }
 ```
+
+## 10. Update M3Color:
+* Update M3Color() in `lib/core/theme/m3/m3_color.dart`:
+```dart
+  Color primaryColor() {
+    switch (ApiConstant.appscheme) {
+      case 'Flavor App Scheme': // example: bookmeplus
+        return ThemeConstantFlavor.brandColor; // brand color of flavor
+      default:
+        return ThemeConstant.brandColor;
+    }
+  }
+```
+
+
+
