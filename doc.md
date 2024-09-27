@@ -164,7 +164,7 @@ dart run flutter_native_splash:create --flavor flavor # example: prod, staging, 
 ```dart
   ThemeData light() {
     switch (ApiConstant.appscheme) {
-      case 'Flavor App Name': // example: bookmeplus
+      case 'Flavor App Scheme': // example: bookmeplus
         return ThemeConfigFlavor.light().themeData;
       // ...
       // ...
@@ -174,7 +174,7 @@ dart run flutter_native_splash:create --flavor flavor # example: prod, staging, 
   }
 
   ThemeData dark() {
-    switch (ApiConstant.appName) {
+    switch (ApiConstant.appscheme) {
       case 'Flavor App Scheme':
         return ThemeConfigFlavor.dark().themeData;
       // ...
