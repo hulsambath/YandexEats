@@ -198,5 +198,39 @@ dart run flutter_native_splash:create --flavor flavor # example: prod, staging, 
   }
 ```
 
+## Topic: Should we use Macros Dart in our Project?
+### What is `macros`?
+In Dart, macros are a powerful feature introduced to allow code generation at compile time, enhancing code with additional functionality automatically. Dart macros are specifically designed to be safe and more readable, helping developers avoid repetitive code while keeping logic maintainable and optimized.
 
+### Advantages:
++ Reduces boilerplate code.
++ Enhances code readability.
++ Improves compile-time type safety.
+
+### How to setup `macros`?
+#### Setup macros experiment:
+- Dart Version 3.5.0 or later and flutter version 3.24.0 or later
+- Add the package json to dependencies: dart pub add json
+- Add the package macros to dependencies:
+```yaml
+macros: ^0.1.2-main.4
+```
+- Enable the experiment in your package's analysis_options.yaml file. file at the root of the project:
+```yaml
+analyzer:
+  enable-experiment:
+    - macros
+ ```
+#### To use macros:
+In your_model.dart:
+```dart
+	import 'package:json/json.dart';
+
+	@JsonCodable() // Macro annotation.
+	class User {
+	 final int? age;
+	 final String name;
+	 final String username;
+	}
+```
 
