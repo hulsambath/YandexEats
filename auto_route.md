@@ -35,3 +35,6 @@ final routers = [
     ),
 ];
 ```
+
+## References:
+- [Auto Route](https://pub.dev/documentation/auto_route/latest/)
