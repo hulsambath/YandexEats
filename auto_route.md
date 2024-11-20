@@ -38,3 +38,6 @@ final routers = [
 
 ## References:
 - [Auto Route](https://pub.dev/documentation/auto_route/latest/)
+
+
+![Auto Route Icon](https://raw.githubusercontent.com/Milad-Akarie/auto_route_library/master/art/auto_route_logo.svg)
