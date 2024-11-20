@@ -37,7 +37,7 @@ final routers = [
 ```
 
 ## References:
--[![Auto Route Icon](https://img.shields.io/badge/AutoRoute-Route%20Management-blue)](https://pub.dev/documentation/auto_route/latest/)
+[![Auto Route Icon](https://img.shields.io/badge/AutoRoute-Route%20Management-blue)](https://pub.dev/documentation/auto_route/latest/)
 
 
 ![Auto Route Icon](https://raw.githubusercontent.com/Milad-Akarie/auto_route_library/master/art/auto_route_logo.svg)
