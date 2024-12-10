@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         );
       },
       home: const MyHomePage(
-        title: 'Flutter Demo Home Page',
+        title: 'kdet',
       ),
     );
   }
